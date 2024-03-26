@@ -1,10 +1,15 @@
 plugins {
     id("java")
+    id("application")
     id("org.flywaydb.flyway") version("6.3.2")
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
+
+application {
+    mainClassName = "org.example.Main"
+}
 
 repositories {
     mavenCentral()
