@@ -16,6 +16,20 @@ dependencies {
 //    implementation(kotlin("script-runtime"))
 }
 
+sourceSets {
+    main {
+        java {
+//            setSrcDirs(listOf("ja"))
+        }
+    }
+
+    test {
+        java {
+//            setSrcDirs(listOf("test/src"))
+        }
+    }
+}
+
 tasks.register("hello") {
     doFirst {
         println("Hello")
