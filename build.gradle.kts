@@ -26,6 +26,14 @@ tasks.register("hello") {
 
 }
 
+tasks.register("hello-again") {
+    dependsOn("hello")
+
+    doLast {
+        println("Finished")
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
