@@ -4,6 +4,11 @@ plugins {
     id("org.flywaydb.flyway") version("6.3.2")
 }
 
+java {
+//    sourceCompatibility  = JavaVersion.VERSION_1_8;
+//    targetCompatibility = JavaVersion.VERSION_1_8;
+}
+
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
