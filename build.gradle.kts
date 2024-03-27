@@ -1,3 +1,7 @@
+val log4j_version: String by project
+val jaxb_version: String by project
+val junit_version: String by project
+
 plugins {
     id("java")
     id("application")
@@ -23,8 +27,11 @@ repositories {
 }
 
 dependencies {
+    implementation("log4j:log4j:$log4j_version")
+    implementation("javax.xml.bind:jaxb-api:$jaxb_version")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("junit:junit:$junit_version")
 //    implementation(kotlin("script-runtime"))
 }
 
