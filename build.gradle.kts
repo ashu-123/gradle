@@ -28,12 +28,15 @@ dependencies {
 //    implementation(kotlin("script-runtime"))
 }
 
-repositories {
-    flatDir {
-//        dirs.add(File("libs"))
-    }
-}
+//repositories {
+//    flatDir {
+//        dirs("")
+//    }
+//}
 
+repositories {
+    mavenCentral()
+}
 sourceSets {
     main {
         java {
