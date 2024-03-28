@@ -1,3 +1,4 @@
+import com.adarshr.gradle.testlogger.theme.ThemeType
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 val log4j_version: String by project
@@ -43,6 +44,7 @@ plugins {
 //    id("java-library")
     id("application")
     id("org.flywaydb.flyway") version("6.3.2")
+    id("com.adarshr.test-logger") version("2.0.0")
 }
 
 java {
@@ -117,4 +119,11 @@ tasks.register("hello-again") {
 tasks.test {
     useJUnitPlatform()
     testLogging.events = setOf(TestLogEvent.FAILED, TestLogEvent.PASSED)
+}
+
+testlogger {
+    showSkipped = true
+    showPassed = true
+    showFailed = true
+    theme = ThemeType.STANDARD
 }

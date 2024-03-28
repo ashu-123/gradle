@@ -9,4 +9,9 @@ public class MainTest {
     void testMe() {
         Assertions.assertTrue(5==5);
     }
+
+    @Test
+    void testMyself() {
+        Assertions.assertTrue(5==7);
+    }
 }
