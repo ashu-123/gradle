@@ -125,5 +125,5 @@ testlogger {
     showSkipped = true
     showPassed = true
     showFailed = true
-    theme = ThemeType.STANDARD
+    theme = ThemeType.MOCHA_PARALLEL
 }

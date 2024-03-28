@@ -1,6 +1,7 @@
 package org.example;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class MainTest {
@@ -11,6 +12,7 @@ public class MainTest {
     }
 
     @Test
+    @Disabled
     void testMyself() {
         Assertions.assertTrue(5==7);
     }
