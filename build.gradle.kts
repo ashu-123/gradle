@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 val log4j_version: String by project
 val jaxb_version: String by project
 val junit_version: String by project
@@ -46,7 +48,7 @@ plugins {
 java {
 //    sourceCompatibility  = JavaVersion.VERSION_1_8;
 //    targetCompatibility = JavaVersion.VERSION_1_8;
-    withJavadocJar();
+//    withJavadocJar();
     withSourcesJar();
 }
 
@@ -114,4 +116,5 @@ tasks.register("hello-again") {
 
 tasks.test {
     useJUnitPlatform()
+    testLogging.events = setOf(TestLogEvent.FAILED, TestLogEvent.PASSED)
 }
