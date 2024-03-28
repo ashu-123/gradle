@@ -128,3 +128,14 @@ testlogger {
     showFailed = true
     theme = ThemeType.MOCHA_PARALLEL
 }
+
+tasks.register<Test>("singleTest") {
+    group = "Verification"
+    description = "Runs single test"
+    dependsOn("testClasses")
+    useJUnitPlatform()
+    testLogging.events = setOf(TestLogEvent.PASSED, TestLogEvent.FAILED, TestLogEvent.SKIPPED)
+    filter {
+        includeTestsMatching("org.example.MainTest.testMe")
+    }
+}
