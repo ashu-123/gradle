@@ -37,7 +37,8 @@ val junit_version: String by project
 //}
 
 plugins {
-    id("java")
+//    id("java")
+//    id("java-library")
     id("application")
     id("org.flywaydb.flyway") version("6.3.2")
 }
