@@ -45,6 +45,7 @@ plugins {
     id("application")
     id("org.flywaydb.flyway") version("6.3.2")
     id("com.adarshr.test-logger") version("2.0.0")
+    id("jacoco")
 }
 
 java {
