@@ -2,6 +2,40 @@ val log4j_version: String by project
 val jaxb_version: String by project
 val junit_version: String by project
 
+// Multi-project build configurations
+
+// ALL PROJECTS CONFIGURATION
+//allprojects {
+//    apply(plugin = "java")
+//    version = "1.0-SNAPSHOT"
+//}
+
+// PER PROJECT BASIS CONFIGURATION
+//project(":Repository") { }
+//
+//project(":jacketService") {
+//    dependencies {
+//        implementation(project(":Repository"))
+//    }
+
+// SUB PROJECTS CONFIGURATION
+//subprojects {
+//    dependencies {
+//        implementation("org.hamcrest:hamcrest-core:${hamcrest_version}")
+//    }
+//
+//    java {
+//        sourceCompatibility = JavaVersion.VERSION_13;
+//    }
+//}
+
+//listOf("Repository").forEach { name ->
+//    project(":$name") {
+//        tasks.register("migrate") { }
+//    }
+//}
+//}
+
 plugins {
     id("java")
     id("application")
